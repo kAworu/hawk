@@ -1,0 +1,14 @@
+sshd accepted key    times pct%
+===============================
+tbombadil                1  50%
+bbaggins                 1  50%
+-------------------------------
+*                        2 100%
+
+sshd invalid user    times pct%
+===============================
+saruman                  4  66%
+smaug                    1  16%
+sauron                   1  16%
+-------------------------------
+*                        6 100%
