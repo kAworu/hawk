@@ -6,8 +6,9 @@ addons:
   apt:
     packages:
     - bmake
-    - gawk
     - mawk
+    - busybox-static
+    - gawk
 
 script: bmake test
 
