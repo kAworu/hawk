@@ -9,9 +9,9 @@ function something_eq(s) {
 }
 
 $5 == "sudo:" && $12 ~ /USER=/ {
-	from   = $6;
-	usereq = $12;
-	sudo[from, something_eq(usereq)] += 1;
+	from = $6;
+	to   = something_eq($12);
+	sudo[from, to] += 1;
 }
 
 
