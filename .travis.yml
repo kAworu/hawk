@@ -1,0 +1,10 @@
+language: C # let's lie.
+
+addons:
+  apt:
+    packages:
+    - bmake
+    - gawk
+    - mawk
+
+script: bmake test
