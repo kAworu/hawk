@@ -6,19 +6,22 @@ addons:
   apt:
     packages:
     - bmake
-    - mawk
-    - busybox-static
+    - original-awk
     - gawk
+    - busybox-static
+    - mawk
 
 install:
-  - mawk -W version 2>&1 | head -n 1
-  - busybox | head -n 1
+  - original-awk --version
   - gawk --version | head -n 1
+  - busybox | head -n 1
+  - mawk -W version 2>&1 | head -n 1
 
 script: bmake test
 
 env:
   matrix:
-    - AWK=mawk
-    - AWK="busybox awk"
+    - AWK=original-awk
     - AWK=gawk
+    - AWK="busybox awk"
+    - AWK=mawk
