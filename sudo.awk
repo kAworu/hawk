@@ -43,7 +43,8 @@ function report(pipe, combined, total, pct, from_to, output) {
 	print substr(output, 1, length(output) - 1) | pipe;
 	close(pipe);
 	line("-");
-	printf "%-10s %10s %8d (%3d%%)\n", "*", "*", total, 100;
+	pct = 100;
+	printf "%-10s %10s %8d (%3d%%)\n", "*", "*", total, pct;
 }
 
 END {
