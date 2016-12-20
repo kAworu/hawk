@@ -10,6 +10,11 @@ addons:
     - busybox-static
     - gawk
 
+install:
+  - mawk -W version 2>&1 | head -n 1
+  - busybox | head -n 1
+  - gawk --version | head -n 1
+
 script: bmake test
 
 env:
