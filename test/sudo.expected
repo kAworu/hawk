@@ -1,8 +1,8 @@
-sudo from          to    times (pct%)
-=====================================
-frodo            root        6 ( 60%)
-sam              root        2 ( 20%)
-smeagol          root        1 ( 10%)
-gandalf          root        1 ( 10%)
--------------------------------------
-*                   *       10 (100%)
+sudo from  to            times pct%
+===================================
+frodo      root              6  60%
+sam        root              2  20%
+smeagol    root              1  10%
+gandalf    root              1  10%
+-----------------------------------
+*          *                10 100%

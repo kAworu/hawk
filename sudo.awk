@@ -16,7 +16,7 @@ $5 == "sudo:" && $12 ~ /USER=/ {
 
 
 function head() {
-	return sprintf("%-10s %10s %8s (%4s)", "sudo from", "to", "times", "pct%");
+	return sprintf("%-10s %-10s %8s %4s", "sudo from", "to", "times", "pct%");
 }
 
 function line(char, n, i) {
@@ -37,14 +37,14 @@ function report(pipe, combined, total, pct, from_to, output) {
 	for (combined in sudo) {
 		pct = 100 * sudo[combined] / total;
 		split(combined, from_to, SUBSEP);
-		output = output sprintf("%-10s %10s %8d (%3d%%)\n", from_to[1],
+		output = output sprintf("%-10s %-10s %8d %3d%%\n", from_to[1],
 		       from_to[2], sudo[combined], pct);
 	}
 	print substr(output, 1, length(output) - 1) | pipe;
 	close(pipe);
 	line("-");
 	pct = 100;
-	printf "%-10s %10s %8d (%3d%%)\n", "*", "*", total, pct;
+	printf "%-10s %-10s %8d %3d%%\n", "*", "*", total, pct;
 }
 
 END {
