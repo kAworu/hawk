@@ -10,3 +10,8 @@ addons:
     - mawk
 
 script: bmake test
+
+env:
+  matrix:
+    - AWK=mawk
+    - AWK=gawk
