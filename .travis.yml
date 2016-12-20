@@ -14,4 +14,5 @@ script: bmake test
 env:
   matrix:
     - AWK=mawk
+    - AWK="busybox awk"
     - AWK=gawk
