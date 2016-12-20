@@ -1,17 +1,12 @@
-language: C # because ya know, we're like compiling bmake.
+language: C
 dist: trusty
-sudo: required
+sudo: false
 
 addons:
   apt:
     packages:
-    #- bmake
+    - bmake
     - gawk
     - mawk
-
-install:
-  - wget www.crufty.net/ftp/pub/sjg/bmake.tar.gz
-  - tar xvf bmake.tar.gz
-  - cd bmake && ./configure && sh ./make-bootstrap.sh && sudo make install
 
 script: bmake test
