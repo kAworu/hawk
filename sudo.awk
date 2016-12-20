@@ -52,7 +52,15 @@ END {
 }
 
 
-#Jan 01 00:00:00 hostname sudo:     admin : TTY=pts/0 ; PWD=/usr/home/myuser ; USER=root ; COMMAND=/usr/local/bin/vim /etc/crontab
-#Jan 01 00:00:00 hostname sudo:     admin : TTY=pts/0 ; PWD=/usr/home/myuser ; USER=root ; COMMAND=/usr/local/bin/vim /etc/crontab
-#Jan 01 00:00:00 hostname sudo:     admin : TTY=pts/0 ; PWD=/usr/home/myuser ; USER=root ; COMMAND=/usr/local/bin/vim /etc/crontab
-#Jan 01 00:00:00 hostname sudo:     alex : TTY=pts/0 ; PWD=/usr/home/myuser ; USER=root ; COMMAND=/usr/local/bin/vim /etc/crontab
+# FIXME: some dates could not be found on http://lotr.wikia.com/wiki/Quest_of_the_Ring
+
+#Sep 22 00:00:00 middle-earth sudo:     frodo : TTY=pts/0 ; PWD=/shire/bag-end ; USER=root ; COMMAND=/bin/mv ~bilbo/the-One-Ring .
+#Apr 12 00:00:00 middle-earth sudo:     gandalf : TTY=pts/0 ; PWD=/shire/bag-end ; USER=root ; COMMAND=/bin/mv ./the-One-Ring ./fire/
+#Apr 12 00:01:00 middle-earth sudo:     frodo : TTY=pts/0 ; PWD=/shire/bag-end ; USER=root ; COMMAND=/bin/mv ./fire/the-One-Ring ~frodo/pocket
+#??? ?? 00:00:00 middle-earth sudo:     frodo : TTY=pts/0 ; PWD=/bree/the-prancing-poney ; USER=root ; COMMAND=/usr/bin/touch ~frodo/pocket/the-One-Ring
+#Oct 06 00:00:00 middle-earth sudo:     frodo : TTY=pts/0 ; PWD=/eriador/weathertop ; USER=root ; COMMAND=/usr/bin/touch ~frodo/pocket/the-One-Ring
+#??? ?? 00:00:00 middle-earth sudo:     frodo : TTY=pts/0 ; PWD=/gondor/amon-hen ; USER=root ; COMMAND=/usr/bin/touch ~frodo/pocket/the-One-Ring
+#??? ?? 00:00:00 middle-earth sudo:     sam : TTY=pts/0 ; PWD=/mordor/shelobs-lair ; USER=root ; COMMAND=/bin/mv ~frodo/pocket/the-One-Ring ~/pocket
+#??? ?? 00:00:00 middle-earth sudo:     sam : TTY=pts/0 ; PWD=/mordor/cirith-ungol/tower ; USER=root ; COMMAND=/bin/mv ~/pocket/the-One-Ring ~frodo/pocket
+#??? ?? 00:00:00 middle-earth sudo:     frodo : TTY=pts/0 ; PWD=/mordor/mount-doom ; USER=root ; COMMAND=/usr/bin/touch ~frodo/pocket/the-One-Ring
+#??? ?? 00:00:00 middle-earth sudo:     smeagol : TTY=pts/0 ; PWD=/mordor/mount-doom ; USER=root ; COMMAND=/bin/mv ~frodo/pocket/the-One-Ring .

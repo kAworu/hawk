@@ -1,6 +1,8 @@
 sudo from          to    times (pct%)
 =====================================
-admin            root        3 ( 75%)
-alex             root        1 ( 25%)
+frodo            root        6 ( 60%)
+sam              root        2 ( 20%)
+smeagol          root        1 ( 10%)
+gandalf          root        1 ( 10%)
 -------------------------------------
-*                   *        4 (100%)
+*                   *       10 (100%)
