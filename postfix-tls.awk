@@ -49,7 +49,7 @@ function report(pipe, combined, total, separated, type, version, cipher, pct,
 
 END {
 	header();
-	report("/usr/bin/sort -nr -k4");
+	report("/usr/bin/sort -snr -k4");
 }
 
 #Jan 01 00:00:00 middle-earth postfix/tlsproxy[42]: Anonymous TLS connection established from [192.168.1.12]:1000: TLSv1 with cipher ECDHE-RSA-AES256-SHA (256/256 bits)

@@ -49,7 +49,7 @@ function report(pipe, combined, total, pct, from_to, output) {
 
 END {
 	header();
-	report("/usr/bin/sort -nr -k3");
+	report("/usr/bin/sort -snr -k3");
 }
 
 
