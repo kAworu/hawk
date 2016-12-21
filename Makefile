@@ -5,8 +5,10 @@ SRCS!=		/usr/bin/find ${CWD} -name "*.awk"
 REPORTS=	${SRCS:C/\.awk$/.report/}
 TESTDIR=	${CWD}/test
 
+
 .PHONY: test clean
 .SUFFIXES: .awk .report
+
 
 test: ${REPORTS}
 .for REPORT in ${REPORTS}
@@ -16,6 +18,7 @@ test: ${REPORTS}
 
 clean:
 	-/bin/rm -f ${REPORTS}
+
 
 .awk.report:
 	${AWKCMD} -f ${.IMPSRC} < ${.IMPSRC} > ${.TARGET}
