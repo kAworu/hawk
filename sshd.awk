@@ -48,10 +48,12 @@ function report(stats, pipe, username, total, pct, output) {
 
 END {
 	header("sshd accepted key");
-	report(accepted_publickey, "/usr/bin/sort -snr -k2");
+	report(accepted_publickey,
+	       "/usr/bin/sort -s -k1,1 | /usr/bin/sort -snr -k2,2");
 	print "";
 	header("sshd invalid user");
-	report(invalid_user, "/usr/bin/sort -snr -k2");
+	report(invalid_user,
+	       "/usr/bin/sort -s -k1,1 | /usr/bin/sort -snr -k2,2");
 }
 
 

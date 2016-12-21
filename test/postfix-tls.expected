@@ -1,10 +1,10 @@
 type      version cipher                           count pct%
 =============================================================
 Anonymous TLSv1   DHE-RSA-AES256-SHA                   2  28%
-Anonymous TLSv1   DES-CBC3-SHA                         1  14%
-Anonymous TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384          1  14%
-Anonymous TLSv1   ECDHE-RSA-AES256-SHA                 1  14%
 Anonymous TLSv1   AES128-SHA                           1  14%
+Anonymous TLSv1   DES-CBC3-SHA                         1  14%
+Anonymous TLSv1   ECDHE-RSA-AES256-SHA                 1  14%
+Anonymous TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384          1  14%
 Untrusted TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384          1  14%
 -------------------------------------------------------------
 *         *       *                                    7 100%

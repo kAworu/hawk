@@ -49,7 +49,8 @@ function report(pipe, combined, total, pct, from_to, output) {
 
 END {
 	header();
-	report("/usr/bin/sort -snr -k3");
+	# order by times desc, from, to
+	report("/usr/bin/sort -s -k1,1 -k2,2 | /usr/bin/sort -snr -k3,3");
 }
 
 
