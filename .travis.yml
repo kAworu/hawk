@@ -21,7 +21,7 @@ script: bmake test
 
 env:
   matrix:
-    - AWK=original-awk
-    - AWK=gawk
-    - AWK="busybox awk"
-    - AWK=mawk
+    - AWKCMD=original-awk
+    - AWKCMD=gawk
+    - AWKCMD="busybox awk"
+    - AWKCMD=mawk
