@@ -1,0 +1,11 @@
+postscreen  unique / total
+==========================
+CONNECT          1 /     1
+NOQUEUE          1 /     1
+HANGUP           2 /     2
+PREGREET         3 /     5
+DISCONNECT       1 /     1
+DNSBL            1 /     1
+PASS NEW         1 /     1
+PASS OLD         1 /     1
+WHITELISTED      1 /     1
