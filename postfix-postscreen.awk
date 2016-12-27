@@ -2,9 +2,10 @@
 
 # Returns "foo" given "[foo]"
 function unbracketize(s) {
-	if (match(s, /\[[^\]]+\]/)) {
+	if (match(s, /\[[^]]+\]/)) {
 		return substr(s, RSTART + 1, RLENGTH - 2);
 	}
+	return s;
 }
 
 /postfix\/postscreen\[[0-9]+\]: CONNECT from/ {

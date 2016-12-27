@@ -2,9 +2,10 @@
 
 # Returns "foo" given "[foo]"
 function unbracketize(s) {
-	if (match(s, /\[[^\]]+\]/)) {
+	if (match(s, /\[[^]]+\]/)) {
 		return substr(s, RSTART + 1, RLENGTH - 2);
 	}
+	return s;
 }
 
 $3 == "fail2ban.actions" && $5 == "NOTICE" && $7 == "Ban" {
