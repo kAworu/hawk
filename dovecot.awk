@@ -24,12 +24,12 @@ function unparen(s) {
 	return s;
 }
 
-$5 == "dovecot:" && $7 == "Login:" {
+$5 ~ /dovecot\[[0-9]+\]:/ && $7 == "Login:" {
 	user = uncrocodile(something_eq($8));
 	dovecot_login[user] += 1;
 }
 
-$5 == "dovecot:" && $6 ~ /^lda(.*)$/ {
+$5 ~ /dovecot\[[0-9]+\]:/ && $6 ~ /^lda(.*)$/ {
 	user = unparen(substr($6, 4, length($6) - 4));
 	dovecot_lda[user] += 1;
 }
@@ -74,5 +74,5 @@ END {
 }
 
 
-#Dec 19 15:08:44 hostname dovecot: imap-login: Login: user=<me@mydomain.tld>, method=PLAIN, rip=192.168.0.1, lip=10.0.0.1, mpid=42, TLS, session=<Ing8jUyj1rpNb0xJ>
-#Dec 19 17:58:04 hostname dovecot: lda(me@mydomain.tld): sieve: msgid=<70.B1.4795X.0Foo8585@domain.tld>: stored mail into mailbox 'INBOX'
+#Dec 19 15:08:44 hostname dovecot[123]: imap-login: Login: user=<me@mydomain.tld>, method=PLAIN, rip=192.168.0.1, lip=10.0.0.1, mpid=42, TLS, session=<Ing8jUyj1rpNb0xJ>
+#Dec 19 17:58:04 hostname dovecot[123]: lda(me@mydomain.tld): sieve: msgid=<70.B1.4795X.0Foo8585@domain.tld>: stored mail into mailbox 'INBOX'
